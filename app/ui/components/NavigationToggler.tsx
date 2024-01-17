@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function NavigationToggler() {
     function handleToggler() {
         alert("You clicked me, wow!");
@@ -7,7 +9,7 @@ export default function NavigationToggler() {
 
     return (
         <button className="navbar-toggler">
-            <img src="/button.png" alt="Navigator toggler" onClick={handleToggler} />
+            <Image src="/button.png" alt="Navigator toggler" onClick={handleToggler} width={34} height={18} />
         </button>
     );
 }

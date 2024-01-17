@@ -1,8 +1,9 @@
-import "@/app/ui/styles/landing.scss"
+import "@/app/ui/styles/landing.scss";
 import NavigationToggler from "@/app/ui/components/NavigationToggler";
 import AboutMeButton from "./ui/components/AboutMeButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faTwitterSquare, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
+import Image from "next/image";
 
 
 export default function Home() {
@@ -24,7 +25,7 @@ export default function Home() {
                 <h1>Developer.</h1>
               </header>
 
-              <p>Some times <b>applications</b>, some times <b>web pages</b>, some times even <b>games</b>. I'm <b>always building</b> something new, and <b>always doing it fast</b>.</p>
+              <p>Some times <b>applications</b>, some times <b>web pages</b>, some times even <b>games</b>. I&apos;m <b>always building</b> something new, and <b>always doing it fast</b>.</p>
 
               <AboutMeButton />
 
@@ -37,7 +38,7 @@ export default function Home() {
 
             <div className="col-12 col-md-6 col-lg-4 d-none d-lg-block order-lg-11">
               <div className="d-flex">
-                <div><img className="img-fluid my-picture" src="/andres.png" alt="Picture of the website developer" /></div>
+                <div><Image className="img-fluid my-picture" src="/andres.png" alt="Picture of the website developer" width={380} height={385}/></div>
 
                 <div className="brand-icons">
                   <a className="brand-icon" href="https://www.linkedin.com/in/andresbytes/"><FontAwesomeIcon icon={faLinkedin} /></a>
