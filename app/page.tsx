@@ -1,95 +1,57 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import "@/app/ui/styles/landing.scss"
+import NavigationToggler from "@/app/ui/components/NavigationToggler";
+import AboutMeButton from "./ui/components/AboutMeButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faTwitterSquare, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
+
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <section className="hero">
+        <div className="container">
+          <nav>
+            <a className="logo" href="#">dresnite.</a>
+
+            <NavigationToggler />
+          </nav>
+
+          <div className="row hero-row align-items-center justify-content-center justify-content-lg-between">
+            <div className="col-12 col-md-8 col-lg-5 hero-text text-center text-lg-start">
+              <header>
+                <h1>The</h1>
+                <h1>All-in-one</h1>
+                <h1>Developer.</h1>
+              </header>
+
+              <p>Some times <b>applications</b>, some times <b>web pages</b>, some times even <b>games</b>. I'm <b>always building</b> something new, and <b>always doing it fast</b>.</p>
+
+              <AboutMeButton />
+
+              <div className="brand-icons-phone d-flex d-lg-none justify-content-center">
+                <a className="brand-icon-phone" href="https://www.linkedin.com/in/andresbytes/"><FontAwesomeIcon icon={faLinkedin} /></a>
+                <a className="brand-icon-phone" href="https://x.com/dresnite"><FontAwesomeIcon icon={faTwitterSquare} /></a>
+                <a className="brand-icon-phone" href="https://github.com/dresnite"><FontAwesomeIcon icon={faGithubSquare} /></a>
+              </div>
+            </div>
+
+            <div className="col-12 col-md-6 col-lg-4 d-none d-lg-block order-lg-11">
+              <div className="d-flex">
+                <div><img className="img-fluid my-picture" src="/andres.png" alt="Picture of the website developer" /></div>
+
+                <div className="brand-icons">
+                  <a className="brand-icon" href="https://www.linkedin.com/in/andresbytes/"><FontAwesomeIcon icon={faLinkedin} /></a>
+                  <a className="brand-icon" href="https://x.com/dresnite"><FontAwesomeIcon icon={faTwitterSquare} /></a>
+                  <a className="brand-icon" href="https://github.com/dresnite"><FontAwesomeIcon icon={faGithubSquare} /></a>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      </section>
     </main>
   )
 }
