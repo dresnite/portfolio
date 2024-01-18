@@ -106,7 +106,7 @@ export default function Home() {
       <section className="project-section" id="project-section">
         <div className="container">
           <div className="row">
-            <h3 className="section-title">Projects</h3>
+            <h3 className="section-title text-center text-md-start">Projects</h3>
           </div>
 
           <div className="row">
