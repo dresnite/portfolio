@@ -1,9 +1,50 @@
 $dark-gray: #212529;
 
-nav {
+html {
+    font-size: 62.5%;
+}
+
+.navbar-container {
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
+    color: #ffffff;
+}
+
+.modal-open {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba($color: #000000, $alpha: 0.91);
+    left: 0%;
+    top: 0%;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 3vh;
+}
+
+.navbar-link {
+    color: #fff;
+    font-size: 3.6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    white-space: pre-wrap;
+}
+
+.navbar-link:hover {
+    color: #91A7FF;
+}
+
+nav {
+    padding-top: 2rem;
+    position: fixed;
+    top: 0; 
+    width: 100%;
 }
 
 a {
@@ -19,19 +60,19 @@ a {
 
 .logo {
     font-weight: 900;
-    font-size: 32px;
+    font-size: 3.2rem;
 }
 
 .navbar-toggler {
     align-self: center;
 }
 
-.container {
+.full-height {
     height: 100vh;
 }
 
 .hero-row {
-    height: 80%;
+    height: 100%;
 }
 
 .hero-text h1 {
@@ -40,11 +81,11 @@ a {
 }
 
 .hero-text p {
-    font-size: 20px;
+    font-size: 2rem;
 }
 
 .hero-text header, .hero-text p {
-    margin: 34px 0;
+    margin: 3.4rem 0;
 }
 
 .about-me-button {
@@ -55,6 +96,7 @@ a {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+    font-size: 1.6rem;
 }
 
 .my-picture {
@@ -62,12 +104,12 @@ a {
 }
 
 .brand-icon {
-    font-size: 22px;
+    font-size: 2.2rem;
     display: block;
 }
 
 .brand-icon-phone {
-    font-size: 22px;
+    font-size: 2.2rem;
     display: block;
 }
 
@@ -80,9 +122,9 @@ a {
 }
 
 .brand-icons-phone {
-    margin-top: 34px;
+    margin-top: 3.4rem;
 }
 
 .brand-icon-phone {
-    margin: 0 10px;
+    margin: 0 1.0rem;
 }
